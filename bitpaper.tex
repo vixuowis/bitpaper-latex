@@ -1,0 +1,77 @@
+
+%导言段 定义纸大小 引入模版 中文支持 页边距设置 页眉页脚设置
+\documentclass[a4paper]{ctexrep}
+	\usepackage{xeCJK,geometry, fancyhdr,abstract}
+	
+	%宋体
+	\setCJKmainfont{SimSun} 
+	\geometry{left=2.7cm,right=2.7cm,top=3.5cm,bottom=2.5cm} %页边距
+	\CTEXsetup[number={\arabic{chapter}}]{chapter}
+	
+	%设置首页 不加时间
+	\title{基于OVAL的漏洞管理与发现系统}
+	\author{夏映晖}
+	\date{}
+	
+	%设置页眉页脚
+	\pagestyle{fancy}
+	\lhead{}
+	\chead{北京理工大学工程硕士学位论文}
+	\rhead{}
+	\renewcommand{\headrulewidth}{0.5pt}
+	
+	%使含有Chapter页面不清除页眉页脚
+	\fancypagestyle{plain}{}
+
+%文档开始
+\begin{document}
+	%首页
+	\maketitle
+	
+	%中文摘要
+	\begin{abstract}
+		本文……。（摘要是一篇具有独立性和完整性的短文，应概括而扼要地反映出本论文的主要内容。包括研究目的、研究方法、研究结果和结论等，特别要突出研究结果和结论。中文摘要力求语言精炼准确，硕士学位论文摘要建议500~800字，博士学位论文建议1000~1200字。摘要中不可出现参考文献、图、表、化学结构式、非公知公用的符号和术语。英文摘要与中文摘要的内容应一致。）			关键词：形状记忆；聚氨酯；织物；合成；应用 （一般选3～8个单词或专业术语，且中英文关键词必须对应。）
+	\end{abstract}
+	
+	%英文摘要
+	\renewcommand\abstractname{abstract}
+	\begin{abstract}
+		In order to exploit …….			Key Words: shape memory properties; polyurethane;textile;synthesis;application
+	\end{abstract}
+	
+	%目录页
+	\tableofcontents
+	%新页 计页数
+	\newpage
+	\setcounter{page}{1}
+	
+	%第一章
+	\chapter{引言}
+		%第一节
+		\section{背景介绍}
+			This is where you will write your content. 在这里写上内容。
+			
+		%第二节
+		\section{需求} 
+			中国在East Asia. 
+			%subsection
+			\subsection{Hello Beijing}
+				北京是capital of China. 
+				%subsubsection
+				\subsubsection{Hello Dongcheng District}
+					%paragraph
+					\paragraph{Tian'anmen Square}
+					is in the center of Beijing 
+						%subparagraph
+						\subparagraph{Chairman Mao}
+						is in the center of 天安门广场。
+			%subsection 
+			\subsection{Hello BIT} 
+				%paragraph
+				\paragraph{北京理工大学} is one of the best university in 北京。
+	
+	%参考文献
+	\begin{thebibliography}{}
+	\end{thebibliography}
+\end{document}
+%文档结束
