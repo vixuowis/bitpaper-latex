@@ -1,77 +1,101 @@
-
 %导言段 定义纸大小 引入模版 中文支持 页边距设置 页眉页脚设置
 \documentclass[a4paper]{ctexrep}
-	\usepackage{xeCJK,geometry, fancyhdr,abstract}
-	
+\usepackage{xeCJK,geometry,fancyhdr,abstract}
 	%宋体
 	\setCJKmainfont{SimSun} 
 	\geometry{left=2.7cm,right=2.7cm,top=3.5cm,bottom=2.5cm} %页边距
 	\CTEXsetup[number={\arabic{chapter}}]{chapter}
-	
 	%设置首页 不加时间
 	\title{基于OVAL的漏洞管理与发现系统}
 	\author{夏映晖}
 	\date{}
-	
 	%设置页眉页脚
 	\pagestyle{fancy}
 	\lhead{}
 	\chead{北京理工大学工程硕士学位论文}
 	\rhead{}
 	\renewcommand{\headrulewidth}{0.5pt}
-	
 	%使含有Chapter页面不清除页眉页脚
 	\fancypagestyle{plain}{}
 
 %文档开始
 \begin{document}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%首页
 	\maketitle
-	
 	%中文摘要
 	\begin{abstract}
-		本文……。（摘要是一篇具有独立性和完整性的短文，应概括而扼要地反映出本论文的主要内容。包括研究目的、研究方法、研究结果和结论等，特别要突出研究结果和结论。中文摘要力求语言精炼准确，硕士学位论文摘要建议500~800字，博士学位论文建议1000~1200字。摘要中不可出现参考文献、图、表、化学结构式、非公知公用的符号和术语。英文摘要与中文摘要的内容应一致。）			关键词：形状记忆；聚氨酯；织物；合成；应用 （一般选3～8个单词或专业术语，且中英文关键词必须对应。）
-	\end{abstract}
+	漏洞管理系统需要具有与网络漏洞库实时同步、于本地系统高效扫描等特性。本文以一种开放漏洞描述语言OVAL为基础，构建了能满足高效同步、扫描的开放漏洞管理系统，并使用XBase作为XML数据库，能够在任何CVE条目更新时发现本地漏洞。另外，以该系统为核心，本文又进行了漏洞发生模式的预测，可为信息安全管理提供安全策略优先级建议。
 	
+	关键词：漏洞管理；OVAL；CVE；漏洞预测
+	\end{abstract}
 	%英文摘要
 	\renewcommand\abstractname{abstract}
 	\begin{abstract}
-		In order to exploit …….			Key Words: shape memory properties; polyurethane;textile;synthesis;application
-	\end{abstract}
+	In order to exploit …….
 	
+	Key Words: shape memory properties; polyurethane;textile;synthesis;application
+	\end{abstract}
 	%目录页
 	\tableofcontents
 	%新页 计页数
 	\newpage
 	\setcounter{page}{1}
-	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%第一章
-	\chapter{引言}
+	\chapter{绪论}
 		%第一节
-		\section{背景介绍}
-			This is where you will write your content. 在这里写上内容。
-			
+		\section{研究背景和意义}
+		软件安全性测试方法研究较多，如，静态分析测试、模糊测试、基于属性的安全测试、形式化安全测试、基于渗透的安全测试等。这些方法利用了不同的安全理论和技术，从不同的角度对软件安全性测试做出了探讨，有较多差异性。
+		
+		从理论的形成思想可以将这些方法分为基于系统性考虑的方法以及基于有效性考虑的方法，前者重于通过模型或知识库充分地遍历软件状态，扫描可知的安全性漏洞，但无法避免效率低、误报率高的缺点；后者重于有效地发掘软件漏洞，常常可以发现未知的安全性漏洞，但局限性较大、漏报率高、不够全面和系统。
+
+		近年来，由于软件规模的增大，设计模式的多样化，测试人员很难从架构和设计中找到更多安全性漏洞，系统性的方法效率不高，因此以模糊测试为代表的完全自动化方法逐渐流行起来，成为了攻防两端都会关注的方法。此外，由于已发现的漏洞规模增大，以此为依据构建的知识库也成为了发现新漏洞的有效工具。
 		%第二节
-		\section{需求} 
-			中国在East Asia. 
-			%subsection
-			\subsection{Hello Beijing}
-				北京是capital of China. 
-				%subsubsection
-				\subsubsection{Hello Dongcheng District}
-					%paragraph
-					\paragraph{Tian'anmen Square}
-					is in the center of Beijing 
-						%subparagraph
-						\subparagraph{Chairman Mao}
-						is in the center of 天安门广场。
-			%subsection 
-			\subsection{Hello BIT} 
-				%paragraph
-				\paragraph{北京理工大学} is one of the best university in 北京。
-	
+		\section{国内外研究概况} 
+		漏洞管理也是软件安全的重要课题。有多种漏洞形式化方法被提出，从语义网发展的本体方法是其中一种，Ju An Wang等人建立了一个基于本体技术的漏洞管理系统，能够从漏洞数据库中获取信息安全概念, 并可推理漏洞可能产生的影响。对于自动化漏洞管理上，Martín Barrère等人尝试利用OVAL增强Android实时安全性，实现了一个轻量级自动化漏洞评估系统；进一步地，他们针对漏洞生命周期提出了一个基于OVAL的预测模型，用于检测遗留系统的漏洞。XinMing Ou等人提出了MulVAL,旨在通过OVAL自动发现大规模网络中的漏洞，并可以与入侵检测系统形成互补。
+
+		由于大规模数据分析近年来如火如荼，基于漏洞库的知识发现也成为学者们关注的焦点。Omar H. Alhazmi等人探讨了漏洞的量化特征的提取与漏洞预测的可能性，并在商业和开源系统中均通过逻辑或线性回归模型获得了收敛的结果。他们在另一篇文章中比较了Anderson等人提出的漏洞发现模型（VDMs），以及该模型之前Browne等人提出的漏洞发掘模型（VEMs），还有Alhazmi等人提出的Alhazmi-Malaiya Logistic Model（AML）等分布模型，并通过对现实数据的检测证明AML模型在漏洞记录较多的库中拥有较好性能。在VDMs之上，也有其他的研究，如Jinyoo Kim等人在多版本开源软件系统中挖掘漏洞，考虑了不同版本在同一软件上漏洞发现的影响，并用Apache和Mysql为例做了验证实验。Andy Ozement对VDMs等基于概率的模型提出了质疑，他认为VDMs在软件安全评估上拥有一定的好处，但即使拥有大量漏洞发现特征，该类模型在时间消耗、系统环境适配、漏洞发现独立性和静态代码依赖上都有一定的缺陷，因此VDMs仅能作为漏洞挖掘辅助系统。
+		
+		除了VDM相关研究外，机器学习在漏洞挖掘上也有其他维度的探讨，Mehran Bozorgi等人研究了系统管理中的漏洞防护优先问题，利用机器学习中的SVM分类器，可以预测漏洞是否发生、何时发生，与启发式专家知识系统相比拥有更好的准确性和补充性。同样应用了机器学习方法的辅助性自动软件漏洞检测有Fabian Yamaguchi等人提出的在代码级检测API使用模式的研究，也在真实环境下捕获了未知漏洞。
+		%第三节
+		\section{本文的主要工作}
+		本文目标是基于OVAL描述语言构建漏洞管理及检测系统，在多种系统及软件版本下，分析系统环境条件自动检测已知漏洞，通过对知识库中大量CVE条目进行数据挖掘，可对未知的系统环境进行安全评估与漏洞预测。
+
+		首先，本系统通过实时获取OVAL提供的CVE条目构建软件漏洞管理系统，利用协议信息得到漏洞检查语义，匹配系统环境及各软件的依赖逻辑关系，从而自动化发现系统中存在的已知漏洞。
+		
+		其次，通过对漏洞库的分析，抽取可用于分类未知软件漏洞的特征，使用机器学习的方法构造分类器来判断软件特定的模块可能产生的漏洞，并根据知识库得到该漏洞触发条件。并得到漏洞发生的优先序列，可用于系统的精益安全管理。
+		%第四节
+		\section{本文的组织结构}
+		论文的结构和各章内容如下:
+		
+		第二章:研究综述和工作基础。阐述了软件安全缺陷的概念,缺陷分类和缺 陷建模的研究现状,提出了形式化建模缺陷的必要性。本意简单介绍了形式化方 法的概念和应用。最后给出了本文的研究基础,即基于课题组软件可信工程进行研究。 
+		
+		第三章:深入研究了软件安全缺陷的内部结构,产生原因,抽取出了软件安全缺陷的本质结构。基于此结构,对具体缺陷进一步细化,给出了缺陷形式化建模方法及流程。
+		
+		第四章:基于缺陷形式化模型构建了软件安全缺陷知识库,为软件安全缺陷的自动检测和缓和提供数据支持。并设计实现了缺陷库的管理系统的代码生成器。
+		
+		第五章:总结全文，分析系统中存在的问题，并探讨了未来工作。
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%第二章
+	\chapter{漏洞管理相关理论与技术}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%第三章
+	\chapter{漏洞发生模式的挖掘}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%第四章
+	\chapter{漏洞管理系统的设计与实现}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%第五章
+	\chapter{漏洞管理系统的测试}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%第六章
+	\chapter{总结}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 	%参考文献
-	\begin{thebibliography}{}
-	\end{thebibliography}
-\end{document}
-%文档结束
+	% \begin{thebibliography}{99}
+	% \end{thebibliography}
+	%文档结束
+	\end{document}
+
