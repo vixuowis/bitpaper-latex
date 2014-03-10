@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {1.3}本文的主要工作}{2}
 \contentsline {section}{\numberline {1.4}本文的组织结构}{2}
 \contentsline {chapter}{\numberline {第2章\hspace {0.3em}}漏洞管理相关理论与技术}{3}
-\contentsline {chapter}{\numberline {第3章\hspace {0.3em}}漏洞发生模式预测}{4}
+\contentsline {chapter}{\numberline {第3章\hspace {0.3em}}漏洞发生模式的挖掘}{4}
 \contentsline {chapter}{\numberline {第4章\hspace {0.3em}}漏洞管理系统的设计与实现}{5}
 \contentsline {chapter}{\numberline {第5章\hspace {0.3em}}漏洞管理系统的测试}{6}
 \contentsline {chapter}{\numberline {第6章\hspace {0.3em}}总结}{7}
