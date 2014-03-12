@@ -1,46 +1,46 @@
 This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: bitpaper.aux
-The style file: plain.bst
+The style file: unsrt.bst
 Database file #1: bitpaper.bib
 You've used 2 entries,
-            2118 wiz_defined-function locations,
-            509 strings with 4485 characters,
-and the built_in function-call counts, 785 in all, are:
-= -- 72
-> -- 55
+            1791 wiz_defined-function locations,
+            457 strings with 4010 characters,
+and the built_in function-call counts, 491 in all, are:
+= -- 38
+> -- 33
 < -- 0
-+ -- 22
-- -- 20
-* -- 68
-:= -- 148
++ -- 12
+- -- 10
+* -- 42
+:= -- 94
 add.period$ -- 6
 call.type$ -- 2
-change.case$ -- 15
+change.case$ -- 1
 chr.to.int$ -- 0
 cite$ -- 2
-duplicate$ -- 20
-empty$ -- 44
-format.name$ -- 20
-if$ -- 146
+duplicate$ -- 16
+empty$ -- 38
+format.name$ -- 10
+if$ -- 96
 int.to.chr$ -- 0
 int.to.str$ -- 2
 missing$ -- 1
 newline$ -- 13
-num.names$ -- 4
-pop$ -- 13
+num.names$ -- 2
+pop$ -- 3
 preamble$ -- 1
-purify$ -- 14
+purify$ -- 0
 quote$ -- 0
-skip$ -- 13
+skip$ -- 5
 stack$ -- 0
-substring$ -- 41
+substring$ -- 31
 swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 8
+type$ -- 0
 warning$ -- 0
-while$ -- 6
+while$ -- 4
 width$ -- 3
 write$ -- 24
