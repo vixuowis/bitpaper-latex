@@ -1,6 +1,6 @@
 %导言段 定义纸大小 引入模版 中文支持 页边距设置 页眉页脚设置
 \documentclass[a4paper]{ctexrep}
-\usepackage{xeCJK,geometry,fancyhdr,abstract}
+\usepackage{xeCJK,geometry,fancyhdr,abstract,graphicx}
 	%宋体
 	\setCJKmainfont{SimSun} 
 	\geometry{left=2.7cm,right=2.7cm,top=3.5cm,bottom=2.5cm} %页边距
@@ -101,15 +101,19 @@
 			\subsection{功能需求}
 			本系统包括以下几个主要功能模块：
 
-			（1）漏洞同步模块：用于同步在线OVAL漏洞数据，约每月同步一次
+			（1）漏洞展示模块：用于对漏洞的可视化展示，包括主页的可视化图及漏洞发生的日历
 
-			（2）漏洞管理模块：用于对漏洞的增删改查
+			（2）漏洞同步模块：实时同步并显示发生的漏洞
 
-			（3）漏洞检查模块：用于通过OVAL对本地系统进行检查
+			（3）漏洞预测模块：从现有漏洞库中挖掘发生模式
 
-			（4）漏洞分析模块：用于对漏洞的发生模式挖掘
+			（4）漏洞管理模块：提供详尽的视图对漏洞进行增删改查
 
-			（5）漏洞展示模块：用于对漏洞的可视化展示
+			（5）漏洞扫描模块：通过OVAL语言对本地系统进行检查
+
+			（6）系统日志模块：记录本系统的任何行为
+
+			（7）系统设置模块：设置本系统的各项参数配置
 
 			\subsection{非功能需求}
 			本系统需要实现以下几个主要非功能需求：
@@ -125,16 +129,22 @@
 			（5）环境：运行于本地，可于本地对漏洞进行查询与检查
 
 			\subsection{用例图}
-
-			\subsection{界面草图}
+			用户用例包括查看漏洞信息、查看漏洞预测、进行漏洞扫描、查看系统日志、设置管理系统等五个主要用例。在查看漏洞信息中，包括了查看漏洞趋势和查看漏洞统计两个子用例，并扩展了漏洞实时同步这个子用例，见图\ref{fig:1}。
+				\begin{figure}[htb]
+					\centering
+					\includegraphics[height=10cm]{fig/1_usecase.png}
+					\caption{\label{fig:1} 用例图}
+				\end{figure}
 
 		\section{系统设计}
 			\subsection{系统架构图}
-			\subsection{功能描述}
+			\subsection{功能设计}
 			\subsection{包图}
 			\subsection{类图}
 			\subsection{时序图}
 			\subsection{ER图}
+			\subsection{界面设计}
+
 		\section{系统实现}
 			\subsection{漏洞扫描模块的编写}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

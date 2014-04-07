@@ -18,15 +18,15 @@
 \contentsline {section}{\numberline {4.1}需求分析}{5}
 \contentsline {subsection}{\numberline {4.1.1}功能需求}{5}
 \contentsline {subsection}{\numberline {4.1.2}非功能需求}{5}
-\contentsline {subsection}{\numberline {4.1.3}用例图}{6}
-\contentsline {subsection}{\numberline {4.1.4}界面草图}{6}
+\contentsline {subsection}{\numberline {4.1.3}用例图}{5}
 \contentsline {section}{\numberline {4.2}系统设计}{6}
 \contentsline {subsection}{\numberline {4.2.1}系统架构图}{6}
-\contentsline {subsection}{\numberline {4.2.2}功能描述}{6}
+\contentsline {subsection}{\numberline {4.2.2}功能设计}{6}
 \contentsline {subsection}{\numberline {4.2.3}包图}{6}
 \contentsline {subsection}{\numberline {4.2.4}类图}{6}
 \contentsline {subsection}{\numberline {4.2.5}时序图}{6}
 \contentsline {subsection}{\numberline {4.2.6}ER图}{6}
+\contentsline {subsection}{\numberline {4.2.7}界面设计}{6}
 \contentsline {section}{\numberline {4.3}系统实现}{6}
 \contentsline {subsection}{\numberline {4.3.1}漏洞扫描模块的编写}{6}
 \contentsline {chapter}{\numberline {第5章\hspace {0.3em}}漏洞管理系统的测试}{7}
