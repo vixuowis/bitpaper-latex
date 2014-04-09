@@ -1,6 +1,6 @@
 %导言段 定义纸大小 引入模版 中文支持 页边距设置 页眉页脚设置
 \documentclass[a4paper]{ctexrep}
-\usepackage{xeCJK,geometry,fancyhdr,abstract,graphicx}
+\usepackage{xeCJK,geometry,fancyhdr,abstract,graphicx,multirow}
 	%宋体
 	\setCJKmainfont{SimSun} 
 	\geometry{left=2.7cm,right=2.7cm,top=3.5cm,bottom=2.5cm} %页边距
@@ -84,7 +84,33 @@
 		\section{漏洞分类}
 		漏洞可从成因、严重程度等角度进行分类，探讨目前存在的分类法
 		\section{基于OVAL的漏洞库设计}
+		OVAL包含了三种模式：定义模式、系统特征模式以及结果模式。
+		\begin{table}[h]
+		\centering
+		\caption{\label{table:1}OVAL 三种模式介绍}
+		\begin{tabular}{c|c|c}
+		\hline
+		\multirow{0}{*}{定义模式} & \multirow{0}{*}{系统特征模式} & \multirow{0}{*}{结果模式} \\
+		\hline
+		\begin{tabular}[c]{@{}c@{}}对漏洞进行定义\\ 对漏洞进行定义\\ 对漏洞进行定义\\ 对漏洞进行定义\\ 对漏洞进行定义\\ 对漏洞进行定义\end{tabular} & \multirow{0}{*}{对漏洞检测行为进行描述} & \multirow{0}{*}{对漏洞影响进行描述} \\
+		\hline
+		\end{tabular}
+		% \begin{tabular}{c|c|c|c|c|c|c|c}
+		% \hline
+		% \multirow{2}{*}{Instance} & \multirow{2}{*}{Original Instance} & \multirow{2}{*}{High Priority} & \multirow{2}{*}{Low Priority} & \multicolumn{2}{|c|}{Benchmark} & \multicolumn{2}{|c}{Our Algorithm} \\
+		% \cline{5-8}
+		% & & & & Utilization & Time(s) & Utilization & Time(s)\\
+		% \hline
+		% LN01\&02  &  LN01 \& LN02    &     LN01      &    LN02     &  99.3\%   & 624 &    &   \\
+
+		% \hline
+		% \end{tabular}
+		\end{table}
+		% OVAL(open vulnerability and assessment language)是开放漏洞评估语言,是基于 XML 标准化的漏洞评估语言,明确规 定了漏洞的定义、漏洞的特征、漏洞的评估算法、漏洞评估各个 阶段产生的文档表示形式。其被划分为三个模式:定义模式 (definition schema)、系统特征模式(system characteristics schema) 和结果模式( results schema) 。
 			\subsection{CVE的漏洞管理模式}
+			CVE提供了公共系统中漏洞的命名规则，并进行编号及描述，是安全漏洞挖掘中重要的参考依据。
+		% CVE(common vulnerabilities and exposures)是信息安全 漏洞通用名字的字典。 CVE 为不同的网络安全数据库或者工 具提供了漏洞的公共命名机制。每个 CVE 标志符包括 CVE 标志符编号、状态标记、安全漏洞的简单描述和其他相关的引用。
+
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	%第三章
 	\chapter{漏洞发生模式的挖掘}

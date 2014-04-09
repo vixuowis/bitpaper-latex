@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2014.3.24)  7 APR 2014 19:02
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013) (format=xelatex 2014.3.6)  10 APR 2014 00:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -815,6 +815,9 @@ Package: abstract 2009/06/08 v1.2a configurable abstracts
 \absparindent=\skip66
 \absparsep=\skip67
 )
+(/usr/local/texlive/2013/texmf-dist/tex/latex/multirow/multirow.sty
+\bigstrutjot=\dimen166
+)
 *************************************************
 * xeCJK warning: "CJKfamily-redef"
 * 
@@ -1005,6 +1008,26 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ] [2]
 第2章
+
+Overfull \vbox (16.445pt too high) detected at line 93
+ []
+
+
+Overfull \vbox (16.445pt too high) detected at line 93
+ []
+
+
+Overfull \vbox (16.445pt too high) detected at line 93
+ []
+
+
+Overfull \vbox (16.445pt too high) detected at line 95
+ []
+
+
+Overfull \vbox (16.445pt too high) detected at line 95
+ []
+
 [3
 
 ]
@@ -1026,12 +1049,12 @@ File: fig/1_usecase.png Graphic file (type QTm)
 
 ] (./bitpaper.aux) ) 
 Here is how much of TeX's memory you used:
- 16941 strings out of 493938
- 382716 string characters out of 6148857
- 390922 words of memory out of 5000000
- 20017 multiletter control sequences out of 15000+600000
+ 16956 strings out of 493938
+ 383040 string characters out of 6148858
+ 391131 words of memory out of 5000000
+ 20028 multiletter control sequences out of 15000+600000
  7524 words of font info for 55 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 63i,10n,50p,874b,258s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,14n,50p,883b,307s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on bitpaper.pdf (13 pages).
